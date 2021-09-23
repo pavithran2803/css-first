@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title style="color: aliceblue;">Document</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
     <style>
-        #red{
-            color:aqua;
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: Metropolis;
+            margin: 4px;
         }
-        #img
-        {
-            width:500px;
-            border-width: 50px;
-            border-style:groove;
-            border-color:aqua;
-            border-radius:30px ;
-
+        
+        div.parent {
+            background-color: #111;
+            min-height: 200px;
         }
-
+        
+        div.child {
+            background-color: #ffbf00;
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            transition-duration:0.5s;
+            transition-timing-function:ease-out;
+            
+        }
+        div.parent:hover div.child{
+            background-color:red;
+            transform:translateX(500px);
+        }
     </style>
 </head>
+
 <body>
-    <h1 id="red">heading</h1>
-    <img id="img" src="./faf-du-plessis.jpg"/>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
 </body>
+
 </html>
